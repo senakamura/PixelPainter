@@ -27,6 +27,12 @@ $(document).ready(function() {
       }
     }
 
+    $('#canvas').css({
+                  width: (xInput.value*25)+(xInput.value*2),
+                  height: (yInput.value*25)+(yInput.value*2)
+                });
+
+
     numGrid(x, y);
 
     var input = 'blue';
