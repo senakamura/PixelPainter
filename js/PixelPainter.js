@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  $('#pixelPainter').append('<input id="xInput">');
-  $('#pixelPainter').append('<input id="yInput">');
+  $('#pixelPainter').append('<input id="xInput" placeholder="Width">');
+  $('#pixelPainter').append('<input id="yInput" placeholder="Height">');
   $('#pixelPainter').append('<button id="submitInput">Submit Me!</button>');
   $('#pixelPainter').append('<div class="clear">');
   $('#pixelPainter').append('<div id="palette">');
@@ -8,11 +8,12 @@ $(document).ready(function() {
 
   // $('#canvas').append('<div class="grid">');
 
-  $('#yInput').keyup(function(){
-    if(event.keyCode === 13){
+  $('#palette').append('<button id="clear">Clear</button>');
 
-    }
+  $('#clear').click(function(){
+    $('.grid').removeAttr("id");
   });
+
 
   $('#submitInput').click(function (){
     $('#canvas').empty();
