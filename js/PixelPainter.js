@@ -42,8 +42,17 @@ $(document).ready(function() {
       $(this).attr("id", input);
     });
 
-  });
+    $('#canvas').mousedown(function(){
+      $('.grid').mouseover(function(){
+        $(this).attr("id", input);
+      });
+    });
 
+    $('#canvas').mouseup(function(){
+      $('.grid').off();
+    });
+
+  });
 
 
 
